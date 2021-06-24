@@ -1,0 +1,30 @@
+<p>
+	<ngb-alert [dismissible]='false'>test</ngb-alert>
+</p>
+<div class="card">
+	<form [formGroup]='form'>
+		<div class="label">
+			<label>Name</label>
+			<span *ngIf="this.form.get('name')?.errors?.required" class="error"> * </span>
+		</div>
+		<input class="form-control" type="text" formControlName='name' placeholder="ex. John Doe">
+		<div class="label">
+			<label>Email</label>
+			<span *ngIf="this.form.get('email')?.errors?.required" class="error"> * </span>
+			<span *ngIf="this.form.get('email')?.errors?.email" class="error"> * </span>
+		</div>
+		<input class="form-control" type="email" formControlName='email' placeholder="name@example.com">
+		<div class="label">
+			<label>Postal Address</label>
+			<span *ngIf="this.form.get('postalAddress')?.errors?.required" class="error"> * </span>
+		</div>
+		<input class="form-control" type="text" formControlName='postalAddress' placeholder="Your answer">
+		<div class="label">
+			<label>Comments</label>
+		</div>
+		<input class="form-control" type="text" formControlName='comments' placeholder="Your answer">
+		<div class="button">
+			<button type="button" class="btn btn-primary" [disabled]='form.invalid' (click)='submitForm()'>Submit</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,13 @@
+.headers {
+	width: 100vw;
+	height: 20vh;
+	background-color: rgb(107, 226, 117);
+}
+.containers {
+	width: 100vw;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(175, 245, 181);
+}
